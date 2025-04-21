@@ -108,6 +108,10 @@ spec:
               pip install flash-attn --no-build-isolation
               echo "Done!"
 
+              echo "Starting training!!!"
+              chmod +x scripts/run_1024_finetune.sh
+              bash scripts/run_1024_finetune.sh
+
           resources:
             limits:
               nvidia.com/gpu: "4"
