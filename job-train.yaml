@@ -115,6 +115,11 @@ spec:
               pip install -U "huggingface_hub[cli]"
               echo "Done!"
 
+              echo "Logging into HF"
+              chmod +x /pvc/Lumina-Image-2.0/huggingface_login.sh
+              bash /pvc/Lumina-Image-2.0/huggingface_login.sh
+              echo "Done!"
+
               echo "Starting training!!!"
               chmod +x scripts/run_1024_finetune.sh
               bash scripts/run_1024_finetune.sh
