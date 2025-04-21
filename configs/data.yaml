@@ -1,4 +1,4 @@
 META:
   -
-    path: '/your/path/to/data.jsonl'
+    path: '/pvc/MIMIC_Dataset/physionet.org/files/mimic-cxr-jpg/2.0.0/LLavA-Rad-Annotations/lumina_data_train.yaml'
     type: 'image_text'
