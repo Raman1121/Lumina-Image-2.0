@@ -105,7 +105,7 @@ spec:
               echo "Done!"
 
               echo "Installing flash-attn"
-              pip install flash-attn --no-build-isolation
+              pip install flash-attn==2.7.3 --no-build-isolation
               echo "Done!"
 
               echo "Starting training!!!"
