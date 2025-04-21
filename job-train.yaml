@@ -104,10 +104,9 @@ spec:
               pip install -r requirements.txt
               echo "Done!"
 
-              # echo "Installing flash-attn"
-              # pip install flash-attn --no-build-isolation
-              # pip install flash-attn --no-build-isolation
-              # echo "Done!"
+              echo "Installing flash-attn"
+              pip install flash-attn --no-build-isolation
+              echo "Done!"
 
               echo "Starting training!!!"
               chmod +x scripts/run_1024_finetune.sh
