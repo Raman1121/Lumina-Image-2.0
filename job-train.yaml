@@ -88,7 +88,7 @@ spec:
                   cmake 
               
               echo "Installing GIT!!"
-              apt-get install git
+              apt-get -y install --no-install-recommends git
 
               # Clean up apt cache
               rm -rf /var/lib/apt/lists/*
