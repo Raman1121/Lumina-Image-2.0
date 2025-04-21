@@ -111,7 +111,9 @@ spec:
               pip install flash-attn==2.7.3 --no-build-isolation
               echo "Done!"
 
-              sleep 1000
+              echo "HF CLI"
+              pip install -U "huggingface_hub[cli]"
+              echo "Done!"
 
               echo "Starting training!!!"
               chmod +x scripts/run_1024_finetune.sh
