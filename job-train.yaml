@@ -87,6 +87,7 @@ spec:
                   tzdata \ # Explicitly install tzdata if needed \
                   cmake 
               
+              echo "Installing GIT!!"
               apt-get install git
 
               # Clean up apt cache
