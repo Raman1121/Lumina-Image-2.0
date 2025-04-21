@@ -10,16 +10,16 @@ import torch.distributed as dist
 
 
 def _setup_dist_env_from_slurm(args):
-    while not os.environ.get("MASTER_ADDR", ""):
-        os.environ["MASTER_ADDR"] = (
-            subprocess.check_output(
-                "sinfo -Nh -n %s | head -n 1 | awk '{print $1}'" % os.environ["SLURM_NODELIST"],
-                shell=True,
-            )
-            .decode()
-            .strip()
-        )
-        sleep(1)
+    # while not os.environ.get("MASTER_ADDR", ""):
+    #     os.environ["MASTER_ADDR"] = (
+    #         subprocess.check_output(
+    #             "sinfo -Nh -n %s | head -n 1 | awk '{print $1}'" % os.environ["SLURM_NODELIST"],
+    #             shell=True,
+    #         )
+    #         .decode()
+    #         .strip()
+    #     )
+    #     sleep(1)
     os.environ["MASTER_PORT"] = str(args.master_port)
     os.environ["RANK"] = os.environ["SLURM_PROCID"]
     os.environ["WORLD_SIZE"] = os.environ["SLURM_NPROCS"]
