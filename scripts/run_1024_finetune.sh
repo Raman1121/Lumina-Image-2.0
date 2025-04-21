@@ -51,9 +51,12 @@ torchrun \
     --data_path ${train_data_path} \
     --results_dir results/"$exp_name" \
     --data_parallel sdp \
-    --max_steps 3000000 \
+    --max_steps 30000 \
     --ckpt_every 1000 --log_every 10 \
     --precision ${precision} --grad_precision fp32 --qk_norm \
     --global_seed 20241207 \
     --num_workers 12 \
     --cache_data_on_disk \
+    --snr_type ${snr_type} \
+    --checkpointing \
+    2>&1 | tee -a results/"$exp_name"/output.log
