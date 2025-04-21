@@ -116,8 +116,8 @@ spec:
               echo "Done!"
 
               echo "Logging into HF"
-              chmod +x /pvc/Lumina-Image-2.0/huggingface_login.sh
-              bash /pvc/Lumina-Image-2.0/huggingface_login.sh
+              chmod +x /pvc/Lumina-Image-2.0/hf_login.sh
+              ./pvc/Lumina-Image-2.0/hf_login.sh.sh
               echo "Done!"
 
               echo "Starting training!!!"
