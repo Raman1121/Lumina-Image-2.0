@@ -86,6 +86,8 @@ spec:
                   ffmpeg \
                   tzdata \ # Explicitly install tzdata if needed \
                   cmake 
+              
+              apt-get install git
 
               # Clean up apt cache
               rm -rf /var/lib/apt/lists/*
